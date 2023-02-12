@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>P1469</title>
+    <link href="/2023/02/12/P1469/"/>
+    <url>/2023/02/12/P1469/</url>
+    
+    <content type="html"><![CDATA[<h1 id="luogu的题解"><a href="#luogu的题解" class="headerlink" title="luogu的题解"></a>luogu的题解</h1><p>天国的luogu题解</p><h2 id="P1469"><a href="#P1469" class="headerlink" title="P1469"></a>P1469</h2><p> <del>像我这样的fw都能发题解了，夭寿</del></p><p><del>1145141919810</del></p><p><strong>前置理论</strong></p><p>位运算中异或的性质：<br>自反：a^b^a &#x3D; b<br>交换律：a^b &#x3D; b^a</p><p><strong>开始烹饪</strong></p><p> <del>这代码并非清汤寡水，里面还有一位蒟蒻在烹饪</del></p><p>先看题目，4mb的内存属实是不当人（不然我的<del>马</del>桶排序也可以过）<br>同时1&lt;&#x3D;n&lt;&#x3D;10^7+1 and 1&lt;&#x3D;a&lt;&#x3D;10^9 这么大的数据给这么小的内存，<br><strong>那么就不能用存储数据再剔除的方法来解决</strong></p><hr><p><strong>最好只有一个变量，这样就不用考虑内存问题。</strong><br>这时，位运算就成了最好的选择</p><hr><p>自反的性质在此时刚好可以用上，假设用a1,a2,a3等来代表相同的数字，那么表达式就可以变成：a1^a2^a3^a3^a1….&#x3D;<del>a1</del>^a2^<del>a3</del>^<del>a3</del>^<del>a1</del>….&#x3D;a2</p><p>这样的话就只剩下一根筷子的长度了。</p><p>附上AC代码：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br><span class="hljs-type">int</span> num,ans = <span class="hljs-number">114514</span>,n;<span class="hljs-comment">//ans初始赋值，避免警告</span><br>    cin&gt;&gt;n;<br>  <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>    cin&gt;&gt;num;<br>  ans^=num;<br>    &#125;<br>  ans^=<span class="hljs-number">114514</span>;<br>  cout&lt;&lt;ans&lt;&lt;endl;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/02/12/hello-world/"/>
+    <url>/2023/02/12/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
