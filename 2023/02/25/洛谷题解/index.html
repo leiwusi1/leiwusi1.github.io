@@ -16,21 +16,21 @@
   <meta name="author" content="leiwusi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="luogu的题解天国的luogu题解 P1469 像我这样的fw都能发题解了，夭寿 1145141919810 前置理论 位运算中异或的性质：自反：a^b^a &#x3D; b交换律：a^b &#x3D; b^a 开始烹饪  这代码并非清汤寡水，里面还有一位蒟蒻在烹饪 先看题目，4mb的内存属实是不当人（不然我的马桶排序也可以过）同时1&lt;&#x3D;n&lt;&#x3D;10^7+1 and">
+    <meta name="description" content="这里是洛谷题解的目录不会有人不知道ctrl+F可以搜索吧有些题目只写了代码，并没有题目的解释，凑合着看吧 题解：P1469:点击这里 只有代码：P1001:点击这里 P2141:点击这里">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1469">
-<meta property="og:url" content="https://leiwusi1.github.io/2023/02/12/P1469/index.html">
+<meta property="og:title" content="天国の洛谷题解🌝">
+<meta property="og:url" content="https://leiwusi1.github.io/2023/02/25/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="鲨鱼乐园🦈">
-<meta property="og:description" content="luogu的题解天国的luogu题解 P1469 像我这样的fw都能发题解了，夭寿 1145141919810 前置理论 位运算中异或的性质：自反：a^b^a &#x3D; b交换律：a^b &#x3D; b^a 开始烹饪  这代码并非清汤寡水，里面还有一位蒟蒻在烹饪 先看题目，4mb的内存属实是不当人（不然我的马桶排序也可以过）同时1&lt;&#x3D;n&lt;&#x3D;10^7+1 and">
+<meta property="og:description" content="这里是洛谷题解的目录不会有人不知道ctrl+F可以搜索吧有些题目只写了代码，并没有题目的解释，凑合着看吧 题解：P1469:点击这里 只有代码：P1001:点击这里 P2141:点击这里">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-12T13:17:35.000Z">
-<meta property="article:modified_time" content="2023-02-25T12:27:28.485Z">
+<meta property="article:published_time" content="2023-02-25T12:32:58.000Z">
+<meta property="article:modified_time" content="2023-02-25T13:25:34.481Z">
 <meta property="article:author" content="leiwusi">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>P1469 - 鲨鱼乐园🦈</title>
+  <title>天国の洛谷题解🌝 - 鲨鱼乐园🦈</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="P1469"></span>
+            <span id="subtitle" data-typed-text="天国の洛谷题解🌝"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-12 21:17" pubdate>
-          2023年2月12日 晚上
+        <time datetime="2023-02-25 20:32" pubdate>
+          2023年2月25日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          630 字
+          90 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          6 分钟
+          1 分钟
         
       </span>
     
@@ -268,67 +268,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">P1469</h1>
+            <h1 style="display: none">天国の洛谷题解🌝</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="luogu的题解"><a href="#luogu的题解" class="headerlink" title="luogu的题解"></a>luogu的题解</h1><p>天国的luogu题解</p>
-<h2 id="P1469"><a href="#P1469" class="headerlink" title="P1469"></a>P1469</h2><p> <del>像我这样的fw都能发题解了，夭寿</del></p>
-<p><del>1145141919810</del></p>
-<p><strong>前置理论</strong></p>
-<p>位运算中异或的性质：<br>自反：a^b^a &#x3D; b<br>交换律：a^b &#x3D; b^a</p>
-<p><strong>开始烹饪</strong></p>
-<p> <del>这代码并非清汤寡水，里面还有一位蒟蒻在烹饪</del></p>
-<p>先看题目，4mb的内存属实是不当人（不然我的<del>马</del>桶排序也可以过）<br>同时1&lt;&#x3D;n&lt;&#x3D;10^7+1 and 1&lt;&#x3D;a&lt;&#x3D;10^9 这么大的数据给这么小的内存，<br><strong>那么就不能用存储数据再剔除的方法来解决</strong></p>
-<hr>
-<p><strong>最好只有一个变量，这样就不用考虑内存问题。</strong><br>这时，位运算就成了最好的选择</p>
-<hr>
-<p>自反的性质在此时刚好可以用上，假设用a1,a2,a3等来代表相同的数字，那么表达式就可以变成：a1^a2^a3^a3^a1….&#x3D;<del>a1</del>^a2^<del>a3</del>^<del>a3</del>^<del>a1</del>….&#x3D;a2</p>
-<p>这样的话就只剩下一根筷子的长度了。</p>
-<p>附上AC代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> num,ans = <span class="hljs-number">114514</span>,n;<span class="hljs-comment">//ans初始赋值，避免警告</span><br>    cin&gt;&gt;n;<br>  	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>    	cin&gt;&gt;num;<br>  		ans^=num;<br>    &#125;<br>  	ans^=<span class="hljs-number">114514</span>;<br>  	cout&lt;&lt;ans&lt;&lt;endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="这里是洛谷题解的目录"><a href="#这里是洛谷题解的目录" class="headerlink" title="这里是洛谷题解的目录"></a>这里是洛谷题解的目录</h1><h4 id="不会有人不知道ctrl-F可以搜索吧"><a href="#不会有人不知道ctrl-F可以搜索吧" class="headerlink" title="不会有人不知道ctrl+F可以搜索吧"></a><strong><del>不会有人不知道ctrl+F可以搜索吧</del></strong></h4><p><strong>有些题目只写了代码，并没有题目的解释，凑合着看吧</strong></p>
+<h3 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h3><p>P1469:<a href="https://leiwusi1.github.io/2023/02/12/P1469/">点击这里</a></p>
+<h3 id="只有代码："><a href="#只有代码：" class="headerlink" title="只有代码："></a>只有代码：</h3><p>P1001:<a href="https://leiwusi1.github.io/2023/02/25/P1001/">点击这里</a></p>
+<p>P2141:<a href="https://leiwusi1.github.io/2023/02/25/P2141/">点击这里</a></p>
 
-
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
                 
               </div>
             
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/coding/" class="category-chain-item">coding</a>
-  
-  
-
-      </span>
-    
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/luogu%E7%9A%84%E9%A2%98%E8%A7%A3/" class="category-chain-item">luogu的题解</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -339,8 +294,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>P1469</div>
-      <div>https://leiwusi1.github.io/2023/02/12/P1469/</div>
+      <div>天国の洛谷题解🌝</div>
+      <div>https://leiwusi1.github.io/2023/02/25/洛谷题解/</div>
     </div>
     <div class="license-meta">
       
@@ -352,7 +307,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月12日</div>
+          <div>2023年2月25日</div>
         </div>
       
       
@@ -379,6 +334,17 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
               
             </div>
 
