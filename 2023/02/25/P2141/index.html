@@ -24,7 +24,7 @@
 <meta property="og:description" content="P214112345678910111213141516171819202122232425262728293031#include&lt;iostream&gt;using namespace std;int main()&amp;#123;	int m;	cin&gt;&gt;m;	int ls[110];	for(int i &#x3D; 1;i&lt;&#x3D;m;i++)&amp;#123;		cin&gt;&gt;ls">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-25T13:15:32.000Z">
-<meta property="article:modified_time" content="2023-02-25T13:24:53.003Z">
+<meta property="article:modified_time" content="2023-03-04T12:03:32.304Z">
 <meta property="article:author" content="leiwusi">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          484 字
+          491 字
         
       </span>
     
@@ -275,7 +275,7 @@
                 
                 <h1 id="P2141"><a href="#P2141" class="headerlink" title="P2141"></a>P2141</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> m;<br>	cin&gt;&gt;m;<br>	<span class="hljs-type">int</span> ls[<span class="hljs-number">110</span>];<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i&lt;=m;i++)&#123;<br>		cin&gt;&gt;ls[i];<br>	&#125;<br>	<span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> b = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i&lt;=m;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>;j&lt;m;j++)&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = j+<span class="hljs-number">1</span>;k&lt;=m;k++)&#123;<br>				<span class="hljs-keyword">if</span> (ls[j] + ls[k] == ls[i] &amp;&amp; ls[i] != ls[j] &amp;&amp; ls[i] != ls[k])&#123;<br>					cnt++;<br>					b = <span class="hljs-number">1</span>;	<br>					<span class="hljs-keyword">break</span>;	<br>				&#125;<br>			&#125;<br>			<span class="hljs-keyword">if</span>(b == <span class="hljs-number">1</span>)&#123;<br>				b = <span class="hljs-number">0</span>;<br>				<span class="hljs-keyword">break</span>;<br>			&#125;<br>			<br>			<br>		&#125;<br>	&#125;<br>	cout&lt;&lt;cnt&lt;&lt;endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125; <br></code></pre></td></tr></table></figure>
 
-
+<h3 id="返回：点击此处"><a href="#返回：点击此处" class="headerlink" title="返回：点击此处"></a>返回：<a href="https://leiwusi1.github.io/2023/02/25/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">点击此处</a></h3>
                 
               </div>
             
